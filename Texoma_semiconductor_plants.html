@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a032e7493389ca1da125e8015f2b4115 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            background-color: white; color: #333333; font-family: arial; font-size: 12px; padding: 10px;
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            background-color: white; color: #333333; font-family: arial; font-size: 12px; padding: 10px;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            background-color: white; color: #333333; font-family: arial; font-size: 12px; padding: 10px;
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            background-color: white; color: #333333; font-family: arial; font-size: 12px; padding: 10px;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            background-color: white; color: #333333; font-family: arial; font-size: 12px; padding: 10px;
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            background-color: white; color: #333333; font-family: arial; font-size: 12px; padding: 10px;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            background-color: white; color: #333333; font-family: arial; font-size: 12px; padding: 10px;
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            background-color: white; color: #333333; font-family: arial; font-size: 12px; padding: 10px;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    <h3 align="center" style="font-size:16px"><b>Texoma Region Semiconductor Plants</b></h3>
+    
+            <div class="folium-map" id="map_a032e7493389ca1da125e8015f2b4115" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a032e7493389ca1da125e8015f2b4115 = L.map(
+                "map_a032e7493389ca1da125e8015f2b4115",
+                {
+                    center: [32.779167, -96.808891],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_cf2b9b219dacbd302fbc43b64a9ec03b = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 9, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false, "zoomStart": 15}
+            ).addTo(map_a032e7493389ca1da125e8015f2b4115);
+        
+    
+            var feature_group_0961c89fe6fb55c653fdf7ddde9483f5 = L.featureGroup(
+                {}
+            ).addTo(map_a032e7493389ca1da125e8015f2b4115);
+        
+    
+        function geo_json_bcea55148974edfafc8ae8d6d406e9c2_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#000000", "fillColor": "#000000", "fillOpacity": 0.5, "weight": 0.1};
+            }
+        }
+        function geo_json_bcea55148974edfafc8ae8d6d406e9c2_pointToLayer(feature, latlng) {
+            var opts = {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e41a1c", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 5, "stroke": true, "weight": 0.2};
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_bcea55148974edfafc8ae8d6d406e9c2_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        geo_json_bcea55148974edfafc8ae8d6d406e9c2.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_bcea55148974edfafc8ae8d6d406e9c2_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_bcea55148974edfafc8ae8d6d406e9c2 = L.geoJson(null, {
+                onEachFeature: geo_json_bcea55148974edfafc8ae8d6d406e9c2_onEachFeature,
+            
+                pointToLayer: geo_json_bcea55148974edfafc8ae8d6d406e9c2_pointToLayer
+        });
+
+        function geo_json_bcea55148974edfafc8ae8d6d406e9c2_add (data) {
+            geo_json_bcea55148974edfafc8ae8d6d406e9c2
+                .addData(data)
+                .addTo(feature_group_0961c89fe6fb55c653fdf7ddde9483f5);
+        }
+            geo_json_bcea55148974edfafc8ae8d6d406e9c2_add({"bbox": [-98.02505802299996, 30.926923017000057, -98.02505802299996, 30.926923017000057], "features": [{"bbox": [-98.02505802299996, 30.926923017000057, -98.02505802299996, 30.926923017000057], "geometry": {"coordinates": [-98.02505802299996, 30.926923017000057], "type": "Point"}, "id": "10152", "properties": {"City": "LAMPASAS", "Company_Name": "STRAN TECHNOLOGIES INC", "Employees": 17, "NAICS Code": "33441701", "NAICS Name": "Electronic Connector Manufacturing", "State": "TX", "Street": "FM 963", "ZIP": "76550"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_bcea55148974edfafc8ae8d6d406e9c2.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["Company_Name", "Street", "City", "State", "ZIP", "NAICS Code", "NAICS Name", "Employees"];
+    let aliases = ["Company_Name: ", "Street: ", "City: ", "State: ", "ZIP: ", "NAICS Code: ", "NAICS Name: ", "Employees: "];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumtooltip", "sticky": true});
+                     
+    
+    geo_json_bcea55148974edfafc8ae8d6d406e9c2.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["Company_Name", "Street", "City", "State", "ZIP", "NAICS Code", "NAICS Name", "Employees"];
+    let aliases = ["Company_Name: ", "Street: ", "City: ", "State: ", "ZIP: ", "NAICS Code: ", "NAICS Name: ", "Employees: "];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumpopup"});
+                     
+    
+            var feature_group_7194394f97405f4e4cd0da446edfebd3 = L.featureGroup(
+                {}
+            ).addTo(map_a032e7493389ca1da125e8015f2b4115);
+        
+    
+        function geo_json_3fb828b49211367b8dc7844f535ec3e3_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#000000", "fillColor": "#000000", "fillOpacity": 0.5, "weight": 0.1};
+            }
+        }
+        function geo_json_3fb828b49211367b8dc7844f535ec3e3_pointToLayer(feature, latlng) {
+            var opts = {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#377eb8", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 5, "stroke": true, "weight": 0.2};
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_3fb828b49211367b8dc7844f535ec3e3_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        geo_json_3fb828b49211367b8dc7844f535ec3e3.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_3fb828b49211367b8dc7844f535ec3e3_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_3fb828b49211367b8dc7844f535ec3e3 = L.geoJson(null, {
+                onEachFeature: geo_json_3fb828b49211367b8dc7844f535ec3e3_onEachFeature,
+            
+                pointToLayer: geo_json_3fb828b49211367b8dc7844f535ec3e3_pointToLayer
+        });
+
+        function geo_json_3fb828b49211367b8dc7844f535ec3e3_add (data) {
+            geo_json_3fb828b49211367b8dc7844f535ec3e3
+                .addData(data)
+                .addTo(feature_group_7194394f97405f4e4cd0da446edfebd3);
+        }
+            geo_json_3fb828b49211367b8dc7844f535ec3e3_add({"bbox": [-99.86593702799992, 31.131066992000065, -94.42546301999992, 35.57182800300003], "features": [{"bbox": [-97.34168799499994, 31.131066992000065, -97.34168799499994, 31.131066992000065], "geometry": {"coordinates": [-97.34168799499994, 31.131066992000065], "type": "Point"}, "id": "30883", "properties": {"City": "TEMPLE", "Company_Name": "WILSON ART", "Employees": 2, "NAICS Code": "33441905", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "CENTER", "ZIP": "76504"}, "type": "Feature"}, {"bbox": [-96.35289197599992, 31.41156901700001, -96.35289197599992, 31.41156901700001], "geometry": {"coordinates": [-96.35289197599992, 31.41156901700001], "type": "Point"}, "id": "44521", "properties": {"City": "GROESBECK", "Company_Name": "TACTIC ELECTRONICS INC", "Employees": 3, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "LCR 799", "ZIP": "76642"}, "type": "Feature"}, {"bbox": [-97.67617203199988, 32.43037400900008, -97.67617203199988, 32.43037400900008], "geometry": {"coordinates": [-97.67617203199988, 32.43037400900008], "type": "Point"}, "id": "48038", "properties": {"City": "GRANBURY", "Company_Name": "GRUBBCO FLOORING \u0026 INTERIORS", "Employees": 3, "NAICS Code": "33441905", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "FALL CREEK", "ZIP": "76049"}, "type": "Feature"}, {"bbox": [-97.55000100399994, 32.903236017000076, -97.55000100399994, 32.903236017000076], "geometry": {"coordinates": [-97.55000100399994, 32.903236017000076], "type": "Point"}, "id": "69603", "properties": {"City": "AZLE", "Company_Name": "S C ELECTRONICS", "Employees": 5, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "COMMERCE", "ZIP": "76020"}, "type": "Feature"}, {"bbox": [-97.268932991, 32.542642980000046, -97.268932991, 32.542642980000046], "geometry": {"coordinates": [-97.268932991, 32.542642980000046], "type": "Point"}, "id": "74049", "properties": {"City": "BURLESON", "Company_Name": "CERAMIC SOLUTIONS", "Employees": 2, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "BENT OAKS", "ZIP": "76028"}, "type": "Feature"}, {"bbox": [-97.24660200899996, 32.68412200400005, -97.24660200899996, 32.68412200400005], "geometry": {"coordinates": [-97.24660200899996, 32.68412200400005], "type": "Point"}, "id": "86562", "properties": {"City": "FORT WORTH", "Company_Name": "BOBCO INDUSTRIES", "Employees": 5, "NAICS Code": "33441910", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "DAVID STRICKLAND", "ZIP": "76119"}, "type": "Feature"}, {"bbox": [-97.23537897599991, 32.73093300500005, -97.23537897599991, 32.73093300500005], "geometry": {"coordinates": [-97.23537897599991, 32.73093300500005], "type": "Point"}, "id": "89906", "properties": {"City": "FORT WORTH", "Company_Name": "DIAMOND TECHNOLOGIES INC", "Employees": 3, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "ROSEDALE", "ZIP": "76112"}, "type": "Feature"}, {"bbox": [-97.14719800099988, 32.57890300900009, -97.14719800099988, 32.57890300900009], "geometry": {"coordinates": [-97.14719800099988, 32.57890300900009], "type": "Point"}, "id": "91637", "properties": {"City": "MANSFIELD", "Company_Name": "XICON", "Employees": 1, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "MAIN", "ZIP": "76063"}, "type": "Feature"}, {"bbox": [-97.21471699799996, 32.79734999100011, -97.21471699799996, 32.79734999100011], "geometry": {"coordinates": [-97.21471699799996, 32.79734999100011], "type": "Point"}, "id": "119331", "properties": {"City": "FORT WORTH", "Company_Name": "ADVANCED MICROCONTROLS INC", "Employees": 2, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "TRINITY", "ZIP": "76118"}, "type": "Feature"}, {"bbox": [-97.24815500799996, 32.98045300100005, -97.24815500799996, 32.98045300100005], "geometry": {"coordinates": [-97.24815500799996, 32.98045300100005], "type": "Point"}, "id": "130499", "properties": {"City": "FORT WORTH", "Company_Name": "LG LOGISTICS", "Employees": 75, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "INDEPENDENCE", "ZIP": "76177"}, "type": "Feature"}, {"bbox": [-97.10829901399993, 32.83962701100008, -97.10829901399993, 32.83962701100008], "geometry": {"coordinates": [-97.10829901399993, 32.83962701100008], "type": "Point"}, "id": "137299", "properties": {"City": "BEDFORD", "Company_Name": "4 G TECHNOLOGIES", "Employees": 7, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "RELIANCE", "ZIP": "76021"}, "type": "Feature"}, {"bbox": [-97.01866403099993, 32.94164998600012, -97.01866403099993, 32.94164998600012], "geometry": {"coordinates": [-97.01866403099993, 32.94164998600012], "type": "Point"}, "id": "154455", "properties": {"City": "IRVING", "Company_Name": "CEASAR STONE", "Employees": 4, "NAICS Code": "33441905", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "ROYAL", "ZIP": "75063"}, "type": "Feature"}, {"bbox": [-96.97159201699998, 32.90941201300013, -96.97159201699998, 32.90941201300013], "geometry": {"coordinates": [-96.97159201699998, 32.90941201300013], "type": "Point"}, "id": "155653", "properties": {"City": "IRVING", "Company_Name": "QUARTZ PLACE LLC", "Employees": 4, "NAICS Code": "33441905", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "SWEETGUM", "ZIP": "75063"}, "type": "Feature"}, {"bbox": [-97.00104803599994, 32.940764983000086, -97.00104803599994, 32.940764983000086], "geometry": {"coordinates": [-97.00104803599994, 32.940764983000086], "type": "Point"}, "id": "156783", "properties": {"City": "COPPELL", "Company_Name": "INTEGRATED CONTROL TECH", "Employees": 12, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "WRANGLER", "ZIP": "75019"}, "type": "Feature"}, {"bbox": [-96.97423198099992, 32.97861698700018, -96.97423198099992, 32.97861698700018], "geometry": {"coordinates": [-96.97423198099992, 32.97861698700018], "type": "Point"}, "id": "159253", "properties": {"City": "COPPELL", "Company_Name": "JNP ENGINEERED PRODUCTS", "Employees": 30, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "HARRISON", "ZIP": "75019"}, "type": "Feature"}, {"bbox": [-96.98239201499995, 33.02790199100006, -96.98239201499995, 33.02790199100006], "geometry": {"coordinates": [-96.98239201499995, 33.02790199100006], "type": "Point"}, "id": "159777", "properties": {"City": "LEWISVILLE", "Company_Name": "LUNA TECHNICAL SALES LTD", "Employees": 2, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "BENNETT", "ZIP": "75057"}, "type": "Feature"}, {"bbox": [-96.24198598599996, 32.46849599400007, -96.24198598599996, 32.46849599400007], "geometry": {"coordinates": [-96.24198598599996, 32.46849599400007], "type": "Point"}, "id": "166871", "properties": {"City": "KEMP", "Company_Name": "LARSON ELECTRONICS LLC", "Employees": 60, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "HIGHWAY 175", "ZIP": "75143"}, "type": "Feature"}, {"bbox": [-96.88917301499991, 32.87931599300007, -96.88917301499991, 32.87931599300007], "geometry": {"coordinates": [-96.88917301499991, 32.87931599300007], "type": "Point"}, "id": "197903", "properties": {"City": "DALLAS", "Company_Name": "MELLO CO INC", "Employees": 4, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "WALNUT HILL", "ZIP": "75229"}, "type": "Feature"}, {"bbox": [-96.88455701699998, 32.887820985000126, -96.88455701699998, 32.887820985000126], "geometry": {"coordinates": [-96.88455701699998, 32.887820985000126], "type": "Point"}, "id": "198640", "properties": {"City": "DALLAS", "Company_Name": "AMERICAN QUARTZ LLC", "Employees": 4, "NAICS Code": "33441905", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "ZODIAC", "ZIP": "75229"}, "type": "Feature"}, {"bbox": [-96.78169698299993, 32.79658300500002, -96.78169698299993, 32.79658300500002], "geometry": {"coordinates": [-96.78169698299993, 32.79658300500002], "type": "Point"}, "id": "215256", "properties": {"City": "DALLAS", "Company_Name": "ADI ELECTRONICS INC", "Employees": 20, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "BRYAN", "ZIP": "75204"}, "type": "Feature"}, {"bbox": [-96.76641702499995, 32.88395001200018, -96.76641702499995, 32.88395001200018], "geometry": {"coordinates": [-96.76641702499995, 32.88395001200018], "type": "Point"}, "id": "226824", "properties": {"City": "DALLAS", "Company_Name": "DEVICES INC", "Employees": 3, "NAICS Code": "33441903", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "LA SIERRA", "ZIP": "75231"}, "type": "Feature"}, {"bbox": [-96.92815498299994, 32.920874014000084, -96.92815498299994, 32.920874014000084], "geometry": {"coordinates": [-96.92815498299994, 32.920874014000084], "type": "Point"}, "id": "228810", "properties": {"City": "CARROLLTON", "Company_Name": "ELECTRO-WISE DALLAS INC", "Employees": 12, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "MCIVER", "ZIP": "75006"}, "type": "Feature"}, {"bbox": [-96.91583601599994, 32.92886100400005, -96.91583601599994, 32.92886100400005], "geometry": {"coordinates": [-96.91583601599994, 32.92886100400005], "type": "Point"}, "id": "229898", "properties": {"City": "FARMERS BRANCH", "Company_Name": "RAZBERI TECHNOLOGIES INC", "Employees": 35, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "HUTTON", "ZIP": "75234"}, "type": "Feature"}, {"bbox": [-96.91883598299992, 32.95630700100007, -96.91883598299992, 32.95630700100007], "geometry": {"coordinates": [-96.91883598299992, 32.95630700100007], "type": "Point"}, "id": "230917", "properties": {"City": "CARROLLTON", "Company_Name": "ELECTRO PLATE CIRCUITRY INC", "Employees": 27, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "CENTURY", "ZIP": "75006"}, "type": "Feature"}, {"bbox": [-96.92404399499995, 32.98877799100012, -96.92404399499995, 32.98877799100012], "geometry": {"coordinates": [-96.92404399499995, 32.98877799100012], "type": "Point"}, "id": "234945", "properties": {"City": "CARROLLTON", "Company_Name": "PARA SYSTEMS INC", "Employees": 24, "NAICS Code": "33441909", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "LEMAY", "ZIP": "75007"}, "type": "Feature"}, {"bbox": [-96.85828000199992, 33.02093201900013, -96.85828000199992, 33.02093201900013], "geometry": {"coordinates": [-96.85828000199992, 33.02093201900013], "type": "Point"}, "id": "239137", "properties": {"City": "CARROLLTON", "Company_Name": "MATTHEWS \u0026 ASSOC INC", "Employees": 1, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "HIGH POINT", "ZIP": "75007"}, "type": "Feature"}, {"bbox": [-96.77265299299988, 32.923090985000044, -96.77265299299988, 32.923090985000044], "geometry": {"coordinates": [-96.77265299299988, 32.923090985000044], "type": "Point"}, "id": "251205", "properties": {"City": "DALLAS", "Company_Name": "COMPONENTS SENKO ADVANCED", "Employees": 30, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "MERIT", "ZIP": "75251"}, "type": "Feature"}, {"bbox": [-96.83664697999994, 32.98201299900005, -96.83664697999994, 32.98201299900005], "geometry": {"coordinates": [-96.83664697999994, 32.98201299900005], "type": "Point"}, "id": "254749", "properties": {"City": "ADDISON", "Company_Name": "AIRBORN", "Employees": 300, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "AIRBORN", "ZIP": "75001"}, "type": "Feature"}, {"bbox": [-96.75328098999994, 32.99678400800006, -96.75328098999994, 32.99678400800006], "geometry": {"coordinates": [-96.75328098999994, 32.99678400800006], "type": "Point"}, "id": "261397", "properties": {"City": "RICHARDSON", "Company_Name": "FUTURE ELECTRONICS", "Employees": 13, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "WATERVIEW", "ZIP": "75080"}, "type": "Feature"}, {"bbox": [-96.70271296799993, 32.88987698200003, -96.70271296799993, 32.88987698200003], "geometry": {"coordinates": [-96.70271296799993, 32.88987698200003], "type": "Point"}, "id": "268668", "properties": {"City": "DALLAS", "Company_Name": "INTRAPACK CORP", "Employees": 50, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "MARKISON", "ZIP": "75238"}, "type": "Feature"}, {"bbox": [-96.69286800399992, 32.89717497900008, -96.69286800399992, 32.89717497900008], "geometry": {"coordinates": [-96.69286800399992, 32.89717497900008], "type": "Point"}, "id": "268877", "properties": {"City": "DALLAS", "Company_Name": "EAGLE CIRCUIT INC", "Employees": 30, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "ALDER", "ZIP": "75238"}, "type": "Feature"}, {"bbox": [-96.67779499499993, 32.887358010000064, -96.67779499499993, 32.887358010000064], "geometry": {"coordinates": [-96.67779499499993, 32.887358010000064], "type": "Point"}, "id": "270503", "properties": {"City": "GARLAND", "Company_Name": "CE LABS CABLE ELECTRONICS", "Employees": 35, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "WOOD", "ZIP": "75041"}, "type": "Feature"}, {"bbox": [-96.70312401699995, 32.90579199500006, -96.70312401699995, 32.90579199500006], "geometry": {"coordinates": [-96.70312401699995, 32.90579199500006], "type": "Point"}, "id": "277274", "properties": {"City": "DALLAS", "Company_Name": "KNIGHT ELECTRONICS INC", "Employees": 18, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "METRIC", "ZIP": "75243"}, "type": "Feature"}, {"bbox": [-96.70843697, 32.961319002000046, -96.70843697, 32.961319002000046], "geometry": {"coordinates": [-96.70843697, 32.961319002000046], "type": "Point"}, "id": "279008", "properties": {"City": "RICHARDSON", "Company_Name": "LEEMAH ELECTRONICS INC", "Employees": 60, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "ARAPAHO", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.72179504099995, 32.961279984000065, -96.72179504099995, 32.961279984000065], "geometry": {"coordinates": [-96.72179504099995, 32.961279984000065], "type": "Point"}, "id": "279271", "properties": {"City": "RICHARDSON", "Company_Name": "GALAXY FIBER OPTICS \u0026 ELCTRO", "Employees": 25, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "ARAPAHO", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.70702595999995, 32.96925301800013, -96.70702595999995, 32.96925301800013], "geometry": {"coordinates": [-96.70702595999995, 32.96925301800013], "type": "Point"}, "id": "279858", "properties": {"City": "RICHARDSON", "Company_Name": "QTA SOLUTIONS", "Employees": 3, "NAICS Code": "33441910", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "GLENVILLE", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.70766197899992, 32.998137014000044, -96.70766197899992, 32.998137014000044], "geometry": {"coordinates": [-96.70766197899992, 32.998137014000044], "type": "Point"}, "id": "283949", "properties": {"City": "RICHARDSON", "Company_Name": "MICROTEX ELECTRONICS", "Employees": 30, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "CENTRAL", "ZIP": "75080"}, "type": "Feature"}, {"bbox": [-96.72764401699996, 32.99002702000009, -96.72764401699996, 32.99002702000009], "geometry": {"coordinates": [-96.72764401699996, 32.99002702000009], "type": "Point"}, "id": "284089", "properties": {"City": "RICHARDSON", "Company_Name": "NORCOM INC", "Employees": 2, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "LOOKOUT", "ZIP": "75080"}, "type": "Feature"}, {"bbox": [-96.70546399299998, 32.97243001100005, -96.70546399299998, 32.97243001100005], "geometry": {"coordinates": [-96.70546399299998, 32.97243001100005], "type": "Point"}, "id": "284224", "properties": {"City": "RICHARDSON", "Company_Name": "TGM INC", "Employees": 12, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "GLENVILLE", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.69767896499992, 32.975680010000076, -96.69767896499992, 32.975680010000076], "geometry": {"coordinates": [-96.69767896499992, 32.975680010000076], "type": "Point"}, "id": "284336", "properties": {"City": "RICHARDSON", "Company_Name": "JIM D GRAY \u0026 ASSOC INC", "Employees": 4, "NAICS Code": "33441904", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "CAMPBELL", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.70351603799998, 32.98435100500011, -96.70351603799998, 32.98435100500011], "geometry": {"coordinates": [-96.70351603799998, 32.98435100500011], "type": "Point"}, "id": "284394", "properties": {"City": "RICHARDSON", "Company_Name": "CALAMP WIRELESS NETWORKS CORP", "Employees": 199, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "GLENVILLE", "ZIP": "75082"}, "type": "Feature"}, {"bbox": [-96.68231482299988, 33.0091827820001, -96.68231482299988, 33.0091827820001], "geometry": {"coordinates": [-96.68231482299988, 33.0091827820001], "type": "Point"}, "id": "286733", "properties": {"City": "PLANO", "Company_Name": "PARSEC TECHNOLOGIES INC", "Employees": 7, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "JUPITER", "ZIP": "75074"}, "type": "Feature"}, {"bbox": [-96.68145595899993, 33.01123499500009, -96.68145595899993, 33.01123499500009], "geometry": {"coordinates": [-96.68145595899993, 33.01123499500009], "type": "Point"}, "id": "286765", "properties": {"City": "PLANO", "Company_Name": "CLAIREX TECHNOLOGIES INC", "Employees": 5, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "JUPITER", "ZIP": "75074"}, "type": "Feature"}, {"bbox": [-96.65747700999998, 32.98469101700004, -96.65747700999998, 32.98469101700004], "geometry": {"coordinates": [-96.65747700999998, 32.98469101700004], "type": "Point"}, "id": "288168", "properties": {"City": "RICHARDSON", "Company_Name": "CRG FNC TOSHIBA", "Employees": 30, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "TELECOM", "ZIP": "75082"}, "type": "Feature"}, {"bbox": [-96.66091803299993, 32.999475018000055, -96.66091803299993, 32.999475018000055], "geometry": {"coordinates": [-96.66091803299993, 32.999475018000055], "type": "Point"}, "id": "288334", "properties": {"City": "RICHARDSON", "Company_Name": "PARAGON INNOVATIONS", "Employees": 14, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "MATRIX", "ZIP": "75082"}, "type": "Feature"}, {"bbox": [-96.66613803099993, 32.99241598800011, -96.66613803099993, 32.99241598800011], "geometry": {"coordinates": [-96.66613803099993, 32.99241598800011], "type": "Point"}, "id": "288367", "properties": {"City": "RICHARDSON", "Company_Name": "AVNET INC", "Employees": 10, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "PRESIDENT GEORGE BUSH", "ZIP": "75082"}, "type": "Feature"}, {"bbox": [-96.619567003, 32.914898010000144, -96.619567003, 32.914898010000144], "geometry": {"coordinates": [-96.619567003, 32.914898010000144], "type": "Point"}, "id": "289445", "properties": {"City": "GARLAND", "Company_Name": "MICROPAC INDUSTRIES INC", "Employees": 37, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "WALNUT", "ZIP": "75040"}, "type": "Feature"}, {"bbox": [-96.58610602699994, 33.00641301200012, -96.58610602699994, 33.00641301200012], "geometry": {"coordinates": [-96.58610602699994, 33.00641301200012], "type": "Point"}, "id": "292606", "properties": {"City": "WYLIE", "Company_Name": "TEXAS SPECTRUM ELECTRONICS", "Employees": 15, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "REGENCY", "ZIP": "75098"}, "type": "Feature"}, {"bbox": [-94.6737629989999, 31.16101100600003, -94.6737629989999, 31.16101100600003], "geometry": {"coordinates": [-94.6737629989999, 31.16101100600003], "type": "Point"}, "id": "306933", "properties": {"City": "DIBOLL", "Company_Name": "EASTEX ELECTRIC", "Employees": 5, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "FM 1818", "ZIP": "75941"}, "type": "Feature"}, {"bbox": [-95.48508797599999, 32.6516049970001, -95.48508797599999, 32.6516049970001], "geometry": {"coordinates": [-95.48508797599999, 32.6516049970001], "type": "Point"}, "id": "328615", "properties": {"City": "MINEOLA", "Company_Name": "KEMP-MEEK MANUFACTURING INC", "Employees": 6, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "PARK CENTRAL", "ZIP": "75773"}, "type": "Feature"}, {"bbox": [-95.29708027299993, 32.905325339000086, -95.29708027299993, 32.905325339000086], "geometry": {"coordinates": [-95.29708027299993, 32.905325339000086], "type": "Point"}, "id": "330118", "properties": {"City": "WINNSBORO", "Company_Name": "AIRBORN", "Employees": 62, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "FM 312", "ZIP": "75494"}, "type": "Feature"}, {"bbox": [-94.85333697599997, 32.403526982000116, -94.85333697599997, 32.403526982000116], "geometry": {"coordinates": [-94.85333697599997, 32.403526982000116], "type": "Point"}, "id": "332817", "properties": {"City": "KILGORE", "Company_Name": "SATCOM \u0026 MEDICAL PRODUCTS", "Employees": 550, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "LONGVIEW", "ZIP": "75662"}, "type": "Feature"}, {"bbox": [-94.81819534399992, 32.49953761800008, -94.81819534399992, 32.49953761800008], "geometry": {"coordinates": [-94.81819534399992, 32.49953761800008], "type": "Point"}, "id": "335968", "properties": {"City": "LONGVIEW", "Company_Name": "CATHODIC RECTIFIERS INC", "Employees": 18, "NAICS Code": "33441906", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "FISHER", "ZIP": "75604"}, "type": "Feature"}, {"bbox": [-94.73639174099996, 32.49546849800009, -94.73639174099996, 32.49546849800009], "geometry": {"coordinates": [-94.73639174099996, 32.49546849800009], "type": "Point"}, "id": "339449", "properties": {"City": "LONGVIEW", "Company_Name": "VERTEXRSI", "Employees": 4, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "METHVIN", "ZIP": "75601"}, "type": "Feature"}, {"bbox": [-99.86593702799992, 35.21549402000019, -99.86593702799992, 35.21549402000019], "geometry": {"coordinates": [-99.86593702799992, 35.21549402000019], "type": "Point"}, "id": "364189", "properties": {"City": "ERICK", "Company_Name": "PRO TRONICS", "Employees": 1, "NAICS Code": "33441910", "NAICS Name": "Other Electronic Component Manufacturing", "State": "OK", "Street": "SHEB WOOLEY", "ZIP": "73645"}, "type": "Feature"}, {"bbox": [-99.86593702799992, 35.21549402000019, -99.86593702799992, 35.21549402000019], "geometry": {"coordinates": [-99.86593702799992, 35.21549402000019], "type": "Point"}, "id": "364190", "properties": {"City": "ERICK", "Company_Name": "WESTOAK INDUSTRIES INC", "Employees": 43, "NAICS Code": "33441910", "NAICS Name": "Other Electronic Component Manufacturing", "State": "OK", "Street": "SHEB WOOLEY", "ZIP": "73645"}, "type": "Feature"}, {"bbox": [-97.0625810129999, 33.16534399700005, -97.0625810129999, 33.16534399700005], "geometry": {"coordinates": [-97.0625810129999, 33.16534399700005], "type": "Point"}, "id": "375102", "properties": {"City": "DENTON", "Company_Name": "SAYR RESOURCES INC", "Employees": 3, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "FOX HOLLOW", "ZIP": "76208"}, "type": "Feature"}, {"bbox": [-96.99338798299998, 33.06005099000012, -96.99338798299998, 33.06005099000012], "geometry": {"coordinates": [-96.99338798299998, 33.06005099000012], "type": "Point"}, "id": "378010", "properties": {"City": "LEWISVILLE", "Company_Name": "PAXCO ELECTRONICS", "Employees": 6, "NAICS Code": "33441903", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "BENJAMINS", "ZIP": "75057"}, "type": "Feature"}, {"bbox": [-97.38248196299998, 33.66729498100003, -97.38248196299998, 33.66729498100003], "geometry": {"coordinates": [-97.38248196299998, 33.66729498100003], "type": "Point"}, "id": "385105", "properties": {"City": "MUENSTER", "Company_Name": "LORIEN INSTRUMENTS INC", "Employees": 3, "NAICS Code": "33441903", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "COUNTY ROAD 492", "ZIP": "76252"}, "type": "Feature"}, {"bbox": [-96.73737699899999, 33.04188799300016, -96.73737699899999, 33.04188799300016], "geometry": {"coordinates": [-96.73737699899999, 33.04188799300016], "type": "Point"}, "id": "397871", "properties": {"City": "PLANO", "Company_Name": "MICRO BIT TECHNOLOGY INC", "Employees": 5, "NAICS Code": "33441903", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "PARKER", "ZIP": "75023"}, "type": "Feature"}, {"bbox": [-96.80537502099995, 33.235501993000135, -96.80537502099995, 33.235501993000135], "geometry": {"coordinates": [-96.80537502099995, 33.235501993000135], "type": "Point"}, "id": "405284", "properties": {"City": "PROSPER", "Company_Name": "NPI MATERIALS INC", "Employees": 5, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "BROADWAY", "ZIP": "75078"}, "type": "Feature"}, {"bbox": [-96.67748503199992, 33.11426199700011, -96.67748503199992, 33.11426199700011], "geometry": {"coordinates": [-96.67748503199992, 33.11426199700011], "type": "Point"}, "id": "412980", "properties": {"City": "ALLEN", "Company_Name": "CENTRIC RF", "Employees": 12, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "JUNCTION", "ZIP": "75013"}, "type": "Feature"}, {"bbox": [-96.38061201999994, 33.16073198000001, -96.38061201999994, 33.16073198000001], "geometry": {"coordinates": [-96.38061201999994, 33.16073198000001], "type": "Point"}, "id": "421868", "properties": {"City": "FARMERSVILLE", "Company_Name": "UNIVERSAL TRANSFORMER CO", "Employees": 15, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "WELCH", "ZIP": "75442"}, "type": "Feature"}, {"bbox": [-96.40975070699989, 33.946253391000035, -96.40975070699989, 33.946253391000035], "geometry": {"coordinates": [-96.40975070699989, 33.946253391000035], "type": "Point"}, "id": "430580", "properties": {"City": "DURANT", "Company_Name": "ETS-LINDGREN/EMC TEST SYSTEMS", "Employees": 26, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "OK", "Street": "WALDRON", "ZIP": "74701"}, "type": "Feature"}, {"bbox": [-95.91862004099993, 33.12370098300006, -95.91862004099993, 33.12370098300006], "geometry": {"coordinates": [-95.91862004099993, 33.12370098300006], "type": "Point"}, "id": "443904", "properties": {"City": "CAMPBELL", "Company_Name": "DIT INC", "Employees": 6, "NAICS Code": "33441910", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "COUNTY ROAD 3201", "ZIP": "75422"}, "type": "Feature"}, {"bbox": [-95.87407801999994, 33.22928698000003, -95.87407801999994, 33.22928698000003], "geometry": {"coordinates": [-95.87407801999994, 33.22928698000003], "type": "Point"}, "id": "444166", "properties": {"City": "COMMERCE", "Company_Name": "POLARA ENGINEERING INC", "Employees": 50, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "TX", "Street": "MAPLE", "ZIP": "75428"}, "type": "Feature"}, {"bbox": [-97.63600402399996, 35.51751201300002, -97.63600402399996, 35.51751201300002], "geometry": {"coordinates": [-97.63600402399996, 35.51751201300002], "type": "Point"}, "id": "485412", "properties": {"City": "BETHANY", "Company_Name": "RECEPTIVE ELECTRIC", "Employees": 3, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "OK", "Street": "44TH", "ZIP": "73008"}, "type": "Feature"}, {"bbox": [-97.63652797699993, 35.57182800300003, -97.63652797699993, 35.57182800300003], "geometry": {"coordinates": [-97.63652797699993, 35.57182800300003], "type": "Point"}, "id": "487710", "properties": {"City": "OKLAHOMA CITY", "Company_Name": "SOUTHWEST MINI MASSEUSE", "Employees": 3, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "OK", "Street": "100TH", "ZIP": "73162"}, "type": "Feature"}, {"bbox": [-97.57056298599994, 35.51085799700013, -97.57056298599994, 35.51085799700013], "geometry": {"coordinates": [-97.57056298599994, 35.51085799700013], "type": "Point"}, "id": "488724", "properties": {"City": "OKLAHOMA CITY", "Company_Name": "RA-NAV LABS", "Employees": 10, "NAICS Code": "33441902", "NAICS Name": "Other Electronic Component Manufacturing", "State": "OK", "Street": "I 44 SERVICE", "ZIP": "73112"}, "type": "Feature"}, {"bbox": [-94.42546301999992, 35.35960045900004, -94.42546301999992, 35.35960045900004], "geometry": {"coordinates": [-94.42546301999992, 35.35960045900004], "type": "Point"}, "id": "511542", "properties": {"City": "FORT SMITH", "Company_Name": "SCHWARTZ QUARTZ \u0026 STONE", "Employees": 2, "NAICS Code": "33441905", "NAICS Name": "Other Electronic Component Manufacturing", "State": "AR", "Street": "Y", "ZIP": "72901"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_3fb828b49211367b8dc7844f535ec3e3.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["Company_Name", "Street", "City", "State", "ZIP", "NAICS Code", "NAICS Name", "Employees"];
+    let aliases = ["Company_Name: ", "Street: ", "City: ", "State: ", "ZIP: ", "NAICS Code: ", "NAICS Name: ", "Employees: "];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumtooltip", "sticky": true});
+                     
+    
+    geo_json_3fb828b49211367b8dc7844f535ec3e3.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["Company_Name", "Street", "City", "State", "ZIP", "NAICS Code", "NAICS Name", "Employees"];
+    let aliases = ["Company_Name: ", "Street: ", "City: ", "State: ", "ZIP: ", "NAICS Code: ", "NAICS Name: ", "Employees: "];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumpopup"});
+                     
+    
+            var feature_group_f23694d6e43d1a16dcfb5a7c199935df = L.featureGroup(
+                {}
+            ).addTo(map_a032e7493389ca1da125e8015f2b4115);
+        
+    
+        function geo_json_a3a10fc4c5f0fdd0b948181a79bf37db_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#000000", "fillColor": "#000000", "fillOpacity": 0.5, "weight": 0.1};
+            }
+        }
+        function geo_json_a3a10fc4c5f0fdd0b948181a79bf37db_pointToLayer(feature, latlng) {
+            var opts = {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4daf4a", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 5, "stroke": true, "weight": 0.2};
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_a3a10fc4c5f0fdd0b948181a79bf37db_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        geo_json_a3a10fc4c5f0fdd0b948181a79bf37db.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_a3a10fc4c5f0fdd0b948181a79bf37db_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_a3a10fc4c5f0fdd0b948181a79bf37db = L.geoJson(null, {
+                onEachFeature: geo_json_a3a10fc4c5f0fdd0b948181a79bf37db_onEachFeature,
+            
+                pointToLayer: geo_json_a3a10fc4c5f0fdd0b948181a79bf37db_pointToLayer
+        });
+
+        function geo_json_a3a10fc4c5f0fdd0b948181a79bf37db_add (data) {
+            geo_json_a3a10fc4c5f0fdd0b948181a79bf37db
+                .addData(data)
+                .addTo(feature_group_f23694d6e43d1a16dcfb5a7c199935df);
+        }
+            geo_json_a3a10fc4c5f0fdd0b948181a79bf37db_add({"bbox": [-98.55694501599999, 32.54203499900011, -96.26130300399993, 35.213912020000116], "features": [{"bbox": [-97.69057258799995, 32.96351366900006, -97.69057258799995, 32.96351366900006], "geometry": {"coordinates": [-97.69057258799995, 32.96351366900006], "type": "Point"}, "id": "65833", "properties": {"City": "SPRINGTOWN", "Company_Name": "NILE TECHNOLOGIES LLC", "Employees": 2, "NAICS Code": "33441303", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "GOSHEN", "ZIP": "76082"}, "type": "Feature"}, {"bbox": [-97.30741497899997, 32.54203499900011, -97.30741497899997, 32.54203499900011], "geometry": {"coordinates": [-97.30741497899997, 32.54203499900011], "type": "Point"}, "id": "71956", "properties": {"City": "BURLESON", "Company_Name": "SEMI-CONDUCTOR EQUIPMENT SVC", "Employees": 7, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "LOY", "ZIP": "76028"}, "type": "Feature"}, {"bbox": [-97.14719800099988, 32.57890300900009, -97.14719800099988, 32.57890300900009], "geometry": {"coordinates": [-97.14719800099988, 32.57890300900009], "type": "Point"}, "id": "91866", "properties": {"City": "MANSFIELD", "Company_Name": "SUPPLIER DIRECT", "Employees": 1, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "MAIN", "ZIP": "76063"}, "type": "Feature"}, {"bbox": [-97.21791402299999, 32.79684799900007, -97.21791402299999, 32.79684799900007], "geometry": {"coordinates": [-97.21791402299999, 32.79684799900007], "type": "Point"}, "id": "117830", "properties": {"City": "FORT WORTH", "Company_Name": "A \u0026 D SEMICONDUCTOR", "Employees": 3, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "GRAVEL", "ZIP": "76118"}, "type": "Feature"}, {"bbox": [-97.21832096399999, 32.803546019000144, -97.21832096399999, 32.803546019000144], "geometry": {"coordinates": [-97.21832096399999, 32.803546019000144], "type": "Point"}, "id": "118657", "properties": {"City": "RICHLAND HILLS", "Company_Name": "KYOCERA INTELLIGENCE", "Employees": 47, "NAICS Code": "33441303", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "AIRPORT", "ZIP": "76118"}, "type": "Feature"}, {"bbox": [-97.25433498499994, 32.97804299400021, -97.25433498499994, 32.97804299400021], "geometry": {"coordinates": [-97.25433498499994, 32.97804299400021], "type": "Point"}, "id": "130485", "properties": {"City": "FORT WORTH", "Company_Name": "DIODES INC", "Employees": 50, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "INDEPENDENCE", "ZIP": "76177"}, "type": "Feature"}, {"bbox": [-97.02084097899996, 32.83988198900015, -97.02084097899996, 32.83988198900015], "geometry": {"coordinates": [-97.02084097899996, 32.83988198900015], "type": "Point"}, "id": "142334", "properties": {"City": "IRVING", "Company_Name": "INTEL FIDELIS LLC", "Employees": 7, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "VALLEY VIEW", "ZIP": "75062"}, "type": "Feature"}, {"bbox": [-97.02322817599998, 32.92607796400013, -97.02322817599998, 32.92607796400013], "geometry": {"coordinates": [-97.02322817599998, 32.92607796400013], "type": "Point"}, "id": "154143", "properties": {"City": "DALLAS", "Company_Name": "HITACHI HIGH TECH AMERICA INC", "Employees": 7, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "28TH", "ZIP": "75261"}, "type": "Feature"}, {"bbox": [-97.03801994099994, 32.95471508500001, -97.03801994099994, 32.95471508500001], "geometry": {"coordinates": [-97.03801994099994, 32.95471508500001], "type": "Point"}, "id": "154470", "properties": {"City": "DALLAS", "Company_Name": "TEXAS INSTRUMENTS", "Employees": 95, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "STATE HIGHWAY 121", "ZIP": "75261"}, "type": "Feature"}, {"bbox": [-96.99030000599998, 32.912359006000095, -96.99030000599998, 32.912359006000095], "geometry": {"coordinates": [-96.99030000599998, 32.912359006000095], "type": "Point"}, "id": "155291", "properties": {"City": "IRVING", "Company_Name": "FLEXTRONICS INTERNATIONAL", "Employees": 100, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "BENT BRANCH", "ZIP": "75063"}, "type": "Feature"}, {"bbox": [-97.01429102399999, 32.98339701900013, -97.01429102399999, 32.98339701900013], "geometry": {"coordinates": [-97.01429102399999, 32.98339701900013], "type": "Point"}, "id": "157397", "properties": {"City": "COPPELL", "Company_Name": "STMICROELECTRONICS", "Employees": 1500, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "CANYON", "ZIP": "75019"}, "type": "Feature"}, {"bbox": [-97.00151298099992, 33.00043902000011, -97.00151298099992, 33.00043902000011], "geometry": {"coordinates": [-97.00151298099992, 33.00043902000011], "type": "Point"}, "id": "159165", "properties": {"City": "LEWISVILLE", "Company_Name": "TEXAS INSTRUMENTS INC", "Employees": 95, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "STATE HIGHWAY 121 BUS", "ZIP": "75067"}, "type": "Feature"}, {"bbox": [-96.7951200139999, 32.77822998900014, -96.7951200139999, 32.77822998900014], "geometry": {"coordinates": [-96.7951200139999, 32.77822998900014], "type": "Point"}, "id": "202830", "properties": {"City": "DALLAS", "Company_Name": "TEXAS INSTRUMENTS INC", "Employees": 19, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "PO BOX 655474", "ZIP": "75265"}, "type": "Feature"}, {"bbox": [-96.912996982, 32.943843991000065, -96.912996982, 32.943843991000065], "geometry": {"coordinates": [-96.912996982, 32.943843991000065], "type": "Point"}, "id": "230340", "properties": {"City": "CARROLLTON", "Company_Name": "S T MICROELECTRONICS", "Employees": 5, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "ELECTRONICS", "ZIP": "75006"}, "type": "Feature"}, {"bbox": [-96.83707081399994, 32.93445026500013, -96.83707081399994, 32.93445026500013], "geometry": {"coordinates": [-96.83707081399994, 32.93445026500013], "type": "Point"}, "id": "240034", "properties": {"City": "FARMERS BRANCH", "Company_Name": "QORVO INC", "Employees": 35, "NAICS Code": "33441303", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "INNOVATION", "ZIP": "75244"}, "type": "Feature"}, {"bbox": [-96.84021498899996, 32.93192199100004, -96.84021498899996, 32.93192199100004], "geometry": {"coordinates": [-96.84021498899996, 32.93192199100004], "type": "Point"}, "id": "240472", "properties": {"City": "DALLAS", "Company_Name": "TUNDRA SEMI-CONDUCTOR", "Employees": 2, "NAICS Code": "33441303", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "ALPHA", "ZIP": "75244"}, "type": "Feature"}, {"bbox": [-96.82472598599996, 32.94617198100011, -96.82472598599996, 32.94617198100011], "geometry": {"coordinates": [-96.82472598599996, 32.94617198100011], "type": "Point"}, "id": "245953", "properties": {"City": "DALLAS", "Company_Name": "MAXIM INTEGRATED", "Employees": 900, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "DALLAS", "ZIP": "75254"}, "type": "Feature"}, {"bbox": [-96.82956100299994, 32.9703950100001, -96.82956100299994, 32.9703950100001], "geometry": {"coordinates": [-96.82956100299994, 32.9703950100001], "type": "Point"}, "id": "246297", "properties": {"City": "ADDISON", "Company_Name": "MICROCHIP TECHNOLOGY INC", "Employees": 8, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "ADDISON", "ZIP": "75001"}, "type": "Feature"}, {"bbox": [-96.82197102199997, 32.960029991000034, -96.82197102199997, 32.960029991000034], "geometry": {"coordinates": [-96.82197102199997, 32.960029991000034], "type": "Point"}, "id": "246948", "properties": {"City": "ADDISON", "Company_Name": "XILINX INC", "Employees": 0, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "DALLAS", "ZIP": "75001"}, "type": "Feature"}, {"bbox": [-96.75363202399996, 32.91236298800007, -96.75363202399996, 32.91236298800007], "geometry": {"coordinates": [-96.75363202399996, 32.91236298800007], "type": "Point"}, "id": "251595", "properties": {"City": "DALLAS", "Company_Name": "TEXAS INSTRUMENTS INC", "Employees": 3500, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "T I", "ZIP": "75243"}, "type": "Feature"}, {"bbox": [-96.75335097899992, 32.929213002000054, -96.75335097899992, 32.929213002000054], "geometry": {"coordinates": [-96.75335097899992, 32.929213002000054], "type": "Point"}, "id": "252352", "properties": {"City": "DALLAS", "Company_Name": "TEXAS INSTRUMENTS INC", "Employees": 3, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "CENTRAL", "ZIP": "75243"}, "type": "Feature"}, {"bbox": [-96.75807895899996, 32.92260399700004, -96.75807895899996, 32.92260399700004], "geometry": {"coordinates": [-96.75807895899996, 32.92260399700004], "type": "Point"}, "id": "252494", "properties": {"City": "DALLAS", "Company_Name": "TEXAS INSTRUMENTS INC", "Employees": 95, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "LYNDON B JOHNSON", "ZIP": "75243"}, "type": "Feature"}, {"bbox": [-96.73675497799998, 32.94336898900007, -96.73675497799998, 32.94336898900007], "geometry": {"coordinates": [-96.73675497799998, 32.94336898900007], "type": "Point"}, "id": "254195", "properties": {"City": "RICHARDSON", "Company_Name": "ANIDA TECHNOLOGIES", "Employees": 7, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "LINGCO", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.73974597699998, 32.938592016000094, -96.73974597699998, 32.938592016000094], "geometry": {"coordinates": [-96.73974597699998, 32.938592016000094], "type": "Point"}, "id": "254210", "properties": {"City": "RICHARDSON", "Company_Name": "RUCKER \u0026 KOLLS INC", "Employees": 5, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "SHERMAN", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.82768597099991, 32.980391981, -96.82768597099991, 32.980391981], "geometry": {"coordinates": [-96.82768597099991, 32.980391981], "type": "Point"}, "id": "255951", "properties": {"City": "DALLAS", "Company_Name": "LINEAR TECHNOLOGY CORP", "Employees": 7, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "DALLAS", "ZIP": "75248"}, "type": "Feature"}, {"bbox": [-96.80113604099994, 32.98694499400006, -96.80113604099994, 32.98694499400006], "geometry": {"coordinates": [-96.80113604099994, 32.98694499400006], "type": "Point"}, "id": "256929", "properties": {"City": "DALLAS", "Company_Name": "L G SILTRON", "Employees": 7, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "PRESTON", "ZIP": "75252"}, "type": "Feature"}, {"bbox": [-96.79442699799993, 32.99337399800011, -96.79442699799993, 32.99337399800011], "geometry": {"coordinates": [-96.79442699799993, 32.99337399800011], "type": "Point"}, "id": "257698", "properties": {"City": "DALLAS", "Company_Name": "AIR BEARING REPAIR SVC", "Employees": 4, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "DAVENPORT", "ZIP": "75252"}, "type": "Feature"}, {"bbox": [-96.83138498899994, 33.03935900500003, -96.83138498899994, 33.03935900500003], "geometry": {"coordinates": [-96.83138498899994, 33.03935900500003], "type": "Point"}, "id": "258666", "properties": {"City": "PLANO", "Company_Name": "MICROCHIP TECHNOLOGY INC", "Employees": 15, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "DALLAS", "ZIP": "75093"}, "type": "Feature"}, {"bbox": [-96.76018901899992, 32.98237601900008, -96.76018901899992, 32.98237601900008], "geometry": {"coordinates": [-96.76018901899992, 32.98237601900008], "type": "Point"}, "id": "261410", "properties": {"City": "RICHARDSON", "Company_Name": "ARM INC", "Employees": 10, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "LAKE PARK", "ZIP": "75080"}, "type": "Feature"}, {"bbox": [-96.70453100299993, 32.8936920050001, -96.70453100299993, 32.8936920050001], "geometry": {"coordinates": [-96.70453100299993, 32.8936920050001], "type": "Point"}, "id": "268976", "properties": {"City": "DALLAS", "Company_Name": "INFRATECH INC", "Employees": 12, "NAICS Code": "33441303", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "MILLER", "ZIP": "75238"}, "type": "Feature"}, {"bbox": [-96.70096601199998, 32.90595401700006, -96.70096601199998, 32.90595401700006], "geometry": {"coordinates": [-96.70096601199998, 32.90595401700006], "type": "Point"}, "id": "277141", "properties": {"City": "DALLAS", "Company_Name": "G2 AUTOMATED TECHNOLOGIES LLC", "Employees": 17, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "METRIC", "ZIP": "75243"}, "type": "Feature"}, {"bbox": [-96.70501999999998, 32.90635500000012, -96.70501999999998, 32.90635500000012], "geometry": {"coordinates": [-96.70501999999998, 32.90635500000012], "type": "Point"}, "id": "277333", "properties": {"City": "DALLAS", "Company_Name": "TEXAS INSTRUMENTS INC", "Employees": 0, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "I", "ZIP": "75243"}, "type": "Feature"}, {"bbox": [-96.72266298799997, 32.96712900200006, -96.72266298799997, 32.96712900200006], "geometry": {"coordinates": [-96.72266298799997, 32.96712900200006], "type": "Point"}, "id": "278531", "properties": {"City": "RICHARDSON", "Company_Name": "ALTUM", "Employees": 5, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "CENTRAL", "ZIP": "75080"}, "type": "Feature"}, {"bbox": [-96.70794998099991, 32.96703001200008, -96.70794998099991, 32.96703001200008], "geometry": {"coordinates": [-96.70794998099991, 32.96703001200008], "type": "Point"}, "id": "278838", "properties": {"City": "RICHARDSON", "Company_Name": "SCIENTIFIC TESTS", "Employees": 6, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "COLLINS", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.71040162999995, 32.96080733400006, -96.71040162999995, 32.96080733400006], "geometry": {"coordinates": [-96.71040162999995, 32.96080733400006], "type": "Point"}, "id": "278881", "properties": {"City": "RICHARDSON", "Company_Name": "HIGH TEC SVC INC", "Employees": 7, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "ARAPAHO", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.70988796099988, 32.963758010000056, -96.70988796099988, 32.963758010000056], "geometry": {"coordinates": [-96.70988796099988, 32.963758010000056], "type": "Point"}, "id": "279100", "properties": {"City": "RICHARDSON", "Company_Name": "JNC ENTERPRISES", "Employees": 7, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "SECURITY", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.7096579619999, 32.95641998900012, -96.7096579619999, 32.95641998900012], "geometry": {"coordinates": [-96.7096579619999, 32.95641998900012], "type": "Point"}, "id": "279150", "properties": {"City": "RICHARDSON", "Company_Name": "LSA CLEANPART TEXAS", "Employees": 1, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "INTERNATIONAL", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.71043496399994, 32.9611889990001, -96.71043496399994, 32.9611889990001], "geometry": {"coordinates": [-96.71043496399994, 32.9611889990001], "type": "Point"}, "id": "279292", "properties": {"City": "RICHARDSON", "Company_Name": "HIGH TECH SVC", "Employees": 14, "NAICS Code": "33441303", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "ARAPAHO", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.702719003, 32.95813601600007, -96.702719003, 32.95813601600007], "geometry": {"coordinates": [-96.702719003, 32.95813601600007], "type": "Point"}, "id": "279961", "properties": {"City": "RICHARDSON", "Company_Name": "VLSIP TECHNOLOGIES INC", "Employees": 200, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "PRESIDENTIAL", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.70689897499989, 32.95677898600016, -96.70689897499989, 32.95677898600016], "geometry": {"coordinates": [-96.70689897499989, 32.95677898600016], "type": "Point"}, "id": "280004", "properties": {"City": "RICHARDSON", "Company_Name": "DFW TEST INC", "Employees": 70, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "NGLENVILLE", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.70683602599995, 32.95843701000008, -96.70683602599995, 32.95843701000008], "geometry": {"coordinates": [-96.70683602599995, 32.95843701000008], "type": "Point"}, "id": "280086", "properties": {"City": "RICHARDSON", "Company_Name": "INTERFET CORP", "Employees": 17, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "GLENVILLE", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.71373802099995, 32.98548998000004, -96.71373802099995, 32.98548998000004], "geometry": {"coordinates": [-96.71373802099995, 32.98548998000004], "type": "Point"}, "id": "283098", "properties": {"City": "RICHARDSON", "Company_Name": "LAM RESEARCH CORP", "Employees": 3, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "CENTRAL", "ZIP": "75080"}, "type": "Feature"}, {"bbox": [-96.71073503599992, 32.971027006000014, -96.71073503599992, 32.971027006000014], "geometry": {"coordinates": [-96.71073503599992, 32.971027006000014], "type": "Point"}, "id": "283535", "properties": {"City": "RICHARDSON", "Company_Name": "KLA PLUS CORP", "Employees": 7, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "FIRMAN", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.71401001399994, 32.97427599900004, -96.71401001399994, 32.97427599900004], "geometry": {"coordinates": [-96.71401001399994, 32.97427599900004], "type": "Point"}, "id": "283583", "properties": {"City": "RICHARDSON", "Company_Name": "KYOCERA AMERICA INC", "Employees": 6, "NAICS Code": "33441303", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "CAMPBELL", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.72684698199997, 32.99958599400004, -96.72684698199997, 32.99958599400004], "geometry": {"coordinates": [-96.72684698199997, 32.99958599400004], "type": "Point"}, "id": "283947", "properties": {"City": "RICHARDSON", "Company_Name": "QORVO INC", "Employees": 35, "NAICS Code": "33441303", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "RENNER", "ZIP": "75080"}, "type": "Feature"}, {"bbox": [-96.72797300699992, 32.99689100300003, -96.72797300699992, 32.99689100300003], "geometry": {"coordinates": [-96.72797300699992, 32.99689100300003], "type": "Point"}, "id": "283950", "properties": {"City": "RICHARDSON", "Company_Name": "INFINEON TECHNOLOGIES", "Employees": 2, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "RENNER", "ZIP": "75080"}, "type": "Feature"}, {"bbox": [-96.71681889899995, 33.00177332900014, -96.71681889899995, 33.00177332900014], "geometry": {"coordinates": [-96.71681889899995, 33.00177332900014], "type": "Point"}, "id": "283989", "properties": {"City": "RICHARDSON", "Company_Name": "ASM RICHARDSON", "Employees": 7, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "ALMA", "ZIP": "75080"}, "type": "Feature"}, {"bbox": [-96.69859200599994, 32.972198000000034, -96.69859200599994, 32.972198000000034], "geometry": {"coordinates": [-96.69859200599994, 32.972198000000034], "type": "Point"}, "id": "284659", "properties": {"City": "DALLAS", "Company_Name": "ACCRETECH USA INC", "Employees": 7, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "PLANO", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.70629698599998, 33.00620899700005, -96.70629698599998, 33.00620899700005], "geometry": {"coordinates": [-96.70629698599998, 33.00620899700005], "type": "Point"}, "id": "285724", "properties": {"City": "PLANO", "Company_Name": "VERISILICON", "Employees": 17, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "CENTRAL", "ZIP": "75074"}, "type": "Feature"}, {"bbox": [-96.69310495999994, 33.0099189950001, -96.69310495999994, 33.0099189950001], "geometry": {"coordinates": [-96.69310495999994, 33.0099189950001], "type": "Point"}, "id": "286740", "properties": {"City": "PLANO", "Company_Name": "ON SEMICONDUCTOR CORP", "Employees": 4, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "SUMMIT", "ZIP": "75074"}, "type": "Feature"}, {"bbox": [-96.70621299999996, 33.029768012000055, -96.70621299999996, 33.029768012000055], "geometry": {"coordinates": [-96.70621299999996, 33.029768012000055], "type": "Point"}, "id": "287664", "properties": {"City": "PLANO", "Company_Name": "NXP SEMICONDUCTORS", "Employees": 25, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "PARK", "ZIP": "75074"}, "type": "Feature"}, {"bbox": [-96.66389402799993, 33.0049709900001, -96.66389402799993, 33.0049709900001], "geometry": {"coordinates": [-96.66389402799993, 33.0049709900001], "type": "Point"}, "id": "288116", "properties": {"City": "PLANO", "Company_Name": "FLEXTRONICS INTERNATIONAL", "Employees": 600, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "SHILOH", "ZIP": "75074"}, "type": "Feature"}, {"bbox": [-96.65626196999993, 32.99001298100012, -96.65626196999993, 32.99001298100012], "geometry": {"coordinates": [-96.65626196999993, 32.99001298100012], "type": "Point"}, "id": "288230", "properties": {"City": "RICHARDSON", "Company_Name": "SHINKO ELECTRIC AMERICA INC", "Employees": 7, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "TELECOM", "ZIP": "75082"}, "type": "Feature"}, {"bbox": [-96.67002497099999, 33.01091099300007, -96.67002497099999, 33.01091099300007], "geometry": {"coordinates": [-96.67002497099999, 33.01091099300007], "type": "Point"}, "id": "289018", "properties": {"City": "PLANO", "Company_Name": "AMS TAOS USA INC", "Employees": 90, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "KLEIN", "ZIP": "75074"}, "type": "Feature"}, {"bbox": [-96.57665601799991, 32.929971983000044, -96.57665601799991, 32.929971983000044], "geometry": {"coordinates": [-96.57665601799991, 32.929971983000044], "type": "Point"}, "id": "289694", "properties": {"City": "ROWLETT", "Company_Name": "CCS INC", "Employees": 2, "NAICS Code": "33441303", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "FAIR OAK", "ZIP": "75089"}, "type": "Feature"}, {"bbox": [-96.37209198299996, 32.982347982000114, -96.37209198299996, 32.982347982000114], "geometry": {"coordinates": [-96.37209198299996, 32.982347982000114], "type": "Point"}, "id": "301381", "properties": {"City": "ROYSE CITY", "Company_Name": "JTM TECHNOLOGIES", "Employees": 6, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "COUNTY ROAD 979", "ZIP": "75189"}, "type": "Feature"}, {"bbox": [-98.55694501599999, 34.01468999900006, -98.55694501599999, 34.01468999900006], "geometry": {"coordinates": [-98.55694501599999, 34.01468999900006], "type": "Point"}, "id": "352223", "properties": {"City": "WICHITA FALLS", "Company_Name": "AMERICAN FUEL CELL-COATED", "Employees": 4, "NAICS Code": "33441306", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "CENTRAL", "ZIP": "76305"}, "type": "Feature"}, {"bbox": [-97.14363502199994, 33.05782999500013, -97.14363502199994, 33.05782999500013], "geometry": {"coordinates": [-97.14363502199994, 33.05782999500013], "type": "Point"}, "id": "372915", "properties": {"City": "FLOWER MOUND", "Company_Name": "NOVA ELECTRONIC MATERIALS LLC", "Employees": 5, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "PORTER", "ZIP": "75022"}, "type": "Feature"}, {"bbox": [-96.98866796499999, 33.24340902000004, -96.98866796499999, 33.24340902000004], "geometry": {"coordinates": [-96.98866796499999, 33.24340902000004], "type": "Point"}, "id": "383866", "properties": {"City": "CROSSROADS", "Company_Name": "CARTER GLASS", "Employees": 11, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "FM 424", "ZIP": "76227"}, "type": "Feature"}, {"bbox": [-96.996556007, 33.22906100300008, -96.996556007, 33.22906100300008], "geometry": {"coordinates": [-96.996556007, 33.22906100300008], "type": "Point"}, "id": "383977", "properties": {"City": "CROSSROADS", "Company_Name": "HERAEUS GROUP", "Employees": 2, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "US HIGHWAY 380", "ZIP": "76227"}, "type": "Feature"}, {"bbox": [-96.79765595899994, 33.06956000800007, -96.79765595899994, 33.06956000800007], "geometry": {"coordinates": [-96.79765595899994, 33.06956000800007], "type": "Point"}, "id": "392827", "properties": {"City": "PLANO", "Company_Name": "D3 SEMICONDUCTOR", "Employees": 13, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "LEGACY", "ZIP": "75024"}, "type": "Feature"}, {"bbox": [-96.81742973199994, 33.09048590900014, -96.81742973199994, 33.09048590900014], "geometry": {"coordinates": [-96.81742973199994, 33.09048590900014], "type": "Point"}, "id": "393664", "properties": {"City": "PLANO", "Company_Name": "ACTIVE INTEL LLC", "Employees": 13, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "GRANITE", "ZIP": "75024"}, "type": "Feature"}, {"bbox": [-96.81877902599994, 33.086785992000046, -96.81877902599994, 33.086785992000046], "geometry": {"coordinates": [-96.81877902599994, 33.086785992000046], "type": "Point"}, "id": "394355", "properties": {"City": "PLANO", "Company_Name": "SUMCO USA", "Employees": 3, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "GRANITE", "ZIP": "75024"}, "type": "Feature"}, {"bbox": [-96.799816981, 33.08342501700009, -96.799816981, 33.08342501700009], "geometry": {"coordinates": [-96.799816981, 33.08342501700009], "type": "Point"}, "id": "395383", "properties": {"City": "PLANO", "Company_Name": "DIODES INC", "Employees": 30, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "HEDGCOXE", "ZIP": "75024"}, "type": "Feature"}, {"bbox": [-96.80783100299999, 33.08865301900007, -96.80783100299999, 33.08865301900007], "geometry": {"coordinates": [-96.80783100299999, 33.08865301900007], "type": "Point"}, "id": "395806", "properties": {"City": "PLANO", "Company_Name": "DISCO HI TEC AMERICA INC", "Employees": 5, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "HEADQUARTERS", "ZIP": "75024"}, "type": "Feature"}, {"bbox": [-96.78191499599994, 33.051883999000026, -96.78191499599994, 33.051883999000026], "geometry": {"coordinates": [-96.78191499599994, 33.051883999000026], "type": "Point"}, "id": "397354", "properties": {"City": "PLANO", "Company_Name": "PHOTON SCIENCES INC", "Employees": 3, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "SAVINO", "ZIP": "75093"}, "type": "Feature"}, {"bbox": [-96.76956996199996, 33.10446200100005, -96.76956996199996, 33.10446200100005], "geometry": {"coordinates": [-96.76956996199996, 33.10446200100005], "type": "Point"}, "id": "398976", "properties": {"City": "PLANO", "Company_Name": "INTEL FIRST LLC", "Employees": 22, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "COIT", "ZIP": "75025"}, "type": "Feature"}, {"bbox": [-96.74208201299996, 33.217863996000126, -96.74208201299996, 33.217863996000126], "geometry": {"coordinates": [-96.74208201299996, 33.217863996000126], "type": "Point"}, "id": "405612", "properties": {"City": "MCKINNEY", "Company_Name": "AIO INTERNATIONAL", "Employees": 2, "NAICS Code": "33441303", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "UNIVERSITY BUSINESS", "ZIP": "75071"}, "type": "Feature"}, {"bbox": [-96.75454598699996, 33.18995100100005, -96.75454598699996, 33.18995100100005], "geometry": {"coordinates": [-96.75454598699996, 33.18995100100005], "type": "Point"}, "id": "405731", "properties": {"City": "MCKINNEY", "Company_Name": "TEXAS INSTRUMENTS", "Employees": 95, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "ENCHANTED ROCK", "ZIP": "75072"}, "type": "Feature"}, {"bbox": [-96.6847699959999, 33.09201298900005, -96.6847699959999, 33.09201298900005], "geometry": {"coordinates": [-96.6847699959999, 33.09201298900005], "type": "Point"}, "id": "408263", "properties": {"City": "ALLEN", "Company_Name": "MICRON TECHNOLOGY INC", "Employees": 95, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "BETHANY", "ZIP": "75013"}, "type": "Feature"}, {"bbox": [-96.67747002899995, 33.08081501800005, -96.67747002899995, 33.08081501800005], "geometry": {"coordinates": [-96.67747002899995, 33.08081501800005], "type": "Point"}, "id": "409231", "properties": {"City": "ALLEN", "Company_Name": "QUICKFILTER TECHNOLOGIES INC", "Employees": 13, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "GREENVILLE", "ZIP": "75002"}, "type": "Feature"}, {"bbox": [-96.65904300099997, 33.09822100400007, -96.65904300099997, 33.09822100400007], "geometry": {"coordinates": [-96.65904300099997, 33.09822100400007], "type": "Point"}, "id": "409539", "properties": {"City": "ALLEN", "Company_Name": "OKMETIC INC", "Employees": 40, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "JUPITER", "ZIP": "75002"}, "type": "Feature"}, {"bbox": [-96.67810302999999, 33.094347014000114, -96.67810302999999, 33.094347014000114], "geometry": {"coordinates": [-96.67810302999999, 33.094347014000114], "type": "Point"}, "id": "409711", "properties": {"City": "ALLEN", "Company_Name": "PHOTRONICS INC", "Employees": 120, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "MILLENIUM", "ZIP": "75013"}, "type": "Feature"}, {"bbox": [-96.67771997699997, 33.09611899000008, -96.67771997699997, 33.09611899000008], "geometry": {"coordinates": [-96.67771997699997, 33.09611899000008], "type": "Point"}, "id": "409950", "properties": {"City": "ALLEN", "Company_Name": "FINISAR CORP", "Employees": 175, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "MILLENIUM", "ZIP": "75013"}, "type": "Feature"}, {"bbox": [-96.63602129999995, 33.09433950000007, -96.63602129999995, 33.09433950000007], "geometry": {"coordinates": [-96.63602129999995, 33.09433950000007], "type": "Point"}, "id": "410317", "properties": {"City": "ALLEN", "Company_Name": "TEXAS INSTRUMENTS INC", "Employees": 95, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "", "ZIP": "75002"}, "type": "Feature"}, {"bbox": [-96.60342203299994, 33.20557801200012, -96.60342203299994, 33.20557801200012], "geometry": {"coordinates": [-96.60342203299994, 33.20557801200012], "type": "Point"}, "id": "418195", "properties": {"City": "MCKINNEY", "Company_Name": "PRECISION FENCE \u0026 DECK", "Employees": 12, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "UNIVERSITY", "ZIP": "75069"}, "type": "Feature"}, {"bbox": [-96.61270197299991, 33.213917000000016, -96.61270197299991, 33.213917000000016], "geometry": {"coordinates": [-96.61270197299991, 33.213917000000016], "type": "Point"}, "id": "419038", "properties": {"City": "MCKINNEY", "Company_Name": "SPECTRUM SEMICONDUCTOR TECHS", "Employees": 14, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "MCKINNEY", "ZIP": "75071"}, "type": "Feature"}, {"bbox": [-96.60762304299995, 33.5647772220001, -96.60762304299995, 33.5647772220001], "geometry": {"coordinates": [-96.60762304299995, 33.5647772220001], "type": "Point"}, "id": "420383", "properties": {"City": "SHERMAN", "Company_Name": "TEXAS INSTRUMENTS INC", "Employees": 1104, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "US HIGHWAY 75", "ZIP": "75090"}, "type": "Feature"}, {"bbox": [-96.26130300399993, 33.15146700200007, -96.26130300399993, 33.15146700200007], "geometry": {"coordinates": [-96.26130300399993, 33.15146700200007], "type": "Point"}, "id": "422187", "properties": {"City": "GREENVILLE", "Company_Name": "MPE INC", "Employees": 5, "NAICS Code": "33441302", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "HIGHWAY 380", "ZIP": "75401"}, "type": "Feature"}, {"bbox": [-96.60917872399992, 33.592879941000064, -96.60917872399992, 33.592879941000064], "geometry": {"coordinates": [-96.60917872399992, 33.592879941000064], "type": "Point"}, "id": "425652", "properties": {"City": "SHERMAN", "Company_Name": "GLOBITECH INC", "Employees": 40, "NAICS Code": "33441303", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "TX", "Street": "FM 1417", "ZIP": "75092"}, "type": "Feature"}, {"bbox": [-97.44433898399993, 35.213912020000116, -97.44433898399993, 35.213912020000116], "geometry": {"coordinates": [-97.44433898399993, 35.213912020000116], "type": "Point"}, "id": "437410", "properties": {"City": "NORMAN", "Company_Name": "NANOLIGHT INC", "Employees": 20, "NAICS Code": "33441303", "NAICS Name": "Semiconductor and Related Device Manufacturing", "State": "OK", "Street": "ASP", "ZIP": "73069"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_a3a10fc4c5f0fdd0b948181a79bf37db.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["Company_Name", "Street", "City", "State", "ZIP", "NAICS Code", "NAICS Name", "Employees"];
+    let aliases = ["Company_Name: ", "Street: ", "City: ", "State: ", "ZIP: ", "NAICS Code: ", "NAICS Name: ", "Employees: "];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumtooltip", "sticky": true});
+                     
+    
+    geo_json_a3a10fc4c5f0fdd0b948181a79bf37db.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["Company_Name", "Street", "City", "State", "ZIP", "NAICS Code", "NAICS Name", "Employees"];
+    let aliases = ["Company_Name: ", "Street: ", "City: ", "State: ", "ZIP: ", "NAICS Code: ", "NAICS Name: ", "Employees: "];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumpopup"});
+                     
+    
+            var feature_group_a7a752c0585a488d22ada637600c9495 = L.featureGroup(
+                {}
+            ).addTo(map_a032e7493389ca1da125e8015f2b4115);
+        
+    
+        function geo_json_68ed7a0223d0e18c74c1f65a06d74347_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#000000", "fillColor": "#000000", "fillOpacity": 0.5, "weight": 0.1};
+            }
+        }
+        function geo_json_68ed7a0223d0e18c74c1f65a06d74347_pointToLayer(feature, latlng) {
+            var opts = {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#984ea3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 5, "stroke": true, "weight": 0.2};
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_68ed7a0223d0e18c74c1f65a06d74347_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        geo_json_68ed7a0223d0e18c74c1f65a06d74347.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_68ed7a0223d0e18c74c1f65a06d74347_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_68ed7a0223d0e18c74c1f65a06d74347 = L.geoJson(null, {
+                onEachFeature: geo_json_68ed7a0223d0e18c74c1f65a06d74347_onEachFeature,
+            
+                pointToLayer: geo_json_68ed7a0223d0e18c74c1f65a06d74347_pointToLayer
+        });
+
+        function geo_json_68ed7a0223d0e18c74c1f65a06d74347_add (data) {
+            geo_json_68ed7a0223d0e18c74c1f65a06d74347
+                .addData(data)
+                .addTo(feature_group_a7a752c0585a488d22ada637600c9495);
+        }
+            geo_json_68ed7a0223d0e18c74c1f65a06d74347_add({"bbox": [-97.19307601299991, 32.63942600800004, -96.56381502599993, 33.19893200100008], "features": [{"bbox": [-97.122316992, 32.7077510080001, -97.122316992, 32.7077510080001], "geometry": {"coordinates": [-97.122316992, 32.7077510080001], "type": "Point"}, "id": "100066", "properties": {"City": "ARLINGTON", "Company_Name": "TEXAS CIRCUITRY INC", "Employees": 3, "NAICS Code": "33441203", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "PIONEER", "ZIP": "76013"}, "type": "Feature"}, {"bbox": [-97.122316992, 32.7077510080001, -97.122316992, 32.7077510080001], "geometry": {"coordinates": [-97.122316992, 32.7077510080001], "type": "Point"}, "id": "100079", "properties": {"City": "ARLINGTON", "Company_Name": "CIRCUIT BOARD CONNECTION", "Employees": 2, "NAICS Code": "33441203", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "PIONEER", "ZIP": "76013"}, "type": "Feature"}, {"bbox": [-96.99546809999994, 32.824191000000006, -96.99546809999994, 32.824191000000006], "geometry": {"coordinates": [-96.99546809999994, 32.824191000000006], "type": "Point"}, "id": "140801", "properties": {"City": "IRVING", "Company_Name": "JABIL CIRCUIT INC", "Employees": 9, "NAICS Code": "33441202", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "", "ZIP": "75061"}, "type": "Feature"}, {"bbox": [-96.99929303299996, 32.82248899500012, -96.99929303299996, 32.82248899500012], "geometry": {"coordinates": [-96.99929303299996, 32.82248899500012], "type": "Point"}, "id": "140819", "properties": {"City": "IRVING", "Company_Name": "P C SPECIALTIES", "Employees": 30, "NAICS Code": "33441202", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "CONFLANS", "ZIP": "75061"}, "type": "Feature"}, {"bbox": [-96.96591201999996, 32.81675300700003, -96.96591201999996, 32.81675300700003], "geometry": {"coordinates": [-96.96591201999996, 32.81675300700003], "type": "Point"}, "id": "141959", "properties": {"City": "IRVING", "Company_Name": "W TEK", "Employees": 25, "NAICS Code": "33441203", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "IRBY", "ZIP": "75061"}, "type": "Feature"}, {"bbox": [-96.97414497699992, 32.87110499700006, -96.97414497699992, 32.87110499700006], "geometry": {"coordinates": [-96.97414497699992, 32.87110499700006], "type": "Point"}, "id": "145553", "properties": {"City": "IRVING", "Company_Name": "CIRCUITRONICS INC", "Employees": 36, "NAICS Code": "33441201", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "HURD", "ZIP": "75038"}, "type": "Feature"}, {"bbox": [-97.11447303999996, 32.928365005000174, -97.11447303999996, 32.928365005000174], "geometry": {"coordinates": [-97.11447303999996, 32.928365005000174], "type": "Point"}, "id": "147226", "properties": {"City": "SOUTHLAKE", "Company_Name": "VARIOSYSTEMS", "Employees": 140, "NAICS Code": "33441202", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "KIMBALL", "ZIP": "76092"}, "type": "Feature"}, {"bbox": [-97.13123600799997, 32.94349999800008, -97.13123600799997, 32.94349999800008], "geometry": {"coordinates": [-97.13123600799997, 32.94349999800008], "type": "Point"}, "id": "148277", "properties": {"City": "SOUTHLAKE", "Company_Name": "CIRCUIT TECHNOLOGY LLC", "Employees": 4, "NAICS Code": "33441203", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "CIVIC", "ZIP": "76092"}, "type": "Feature"}, {"bbox": [-96.92237197299995, 32.63942600800004, -96.92237197299995, 32.63942600800004], "geometry": {"coordinates": [-96.92237197299995, 32.63942600800004], "type": "Point"}, "id": "172622", "properties": {"City": "DUNCANVILLE", "Company_Name": "PRECISE CONNECTIONS", "Employees": 40, "NAICS Code": "33441201", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "EXPLORER", "ZIP": "75137"}, "type": "Feature"}, {"bbox": [-96.74512598499994, 32.93096398100004, -96.74512598499994, 32.93096398100004], "geometry": {"coordinates": [-96.74512598499994, 32.93096398100004], "type": "Point"}, "id": "252315", "properties": {"City": "DALLAS", "Company_Name": "OLIVER SALES CO", "Employees": 20, "NAICS Code": "33441203", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "FLOYD", "ZIP": "75243"}, "type": "Feature"}, {"bbox": [-96.69434598499993, 32.88707801300013, -96.69434598499993, 32.88707801300013], "geometry": {"coordinates": [-96.69434598499993, 32.88707801300013], "type": "Point"}, "id": "268821", "properties": {"City": "DALLAS", "Company_Name": "INTEGRATED TEST CORP", "Employees": 20, "NAICS Code": "33441203", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "SANDEN", "ZIP": "75238"}, "type": "Feature"}, {"bbox": [-96.70069896499992, 32.96701999500006, -96.70069896499992, 32.96701999500006], "geometry": {"coordinates": [-96.70069896499992, 32.96701999500006], "type": "Point"}, "id": "279753", "properties": {"City": "RICHARDSON", "Company_Name": "QCG GRAPHICS INC", "Employees": 40, "NAICS Code": "33441201", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "PLANO", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.70369700399996, 32.95885199800008, -96.70369700399996, 32.95885199800008], "geometry": {"coordinates": [-96.70369700399996, 32.95885199800008], "type": "Point"}, "id": "280169", "properties": {"City": "RICHARDSON", "Company_Name": "AUTOMATED CIRCUIT DESIGN", "Employees": 20, "NAICS Code": "33441203", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "PRESIDENTIAL", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.70041096199998, 32.96360898000004, -96.70041096199998, 32.96360898000004], "geometry": {"coordinates": [-96.70041096199998, 32.96360898000004], "type": "Point"}, "id": "280265", "properties": {"City": "RICHARDSON", "Company_Name": "NPI TECHNOLOGIES INC", "Employees": 20, "NAICS Code": "33441201", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "PLANO", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.70809901199996, 32.97285501500006, -96.70809901199996, 32.97285501500006], "geometry": {"coordinates": [-96.70809901199996, 32.97285501500006], "type": "Point"}, "id": "283435", "properties": {"City": "RICHARDSON", "Company_Name": "DELTA V INSTRUMENTS", "Employees": 20, "NAICS Code": "33441203", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "FIRMAN", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.71073503599992, 32.971027006000014, -96.71073503599992, 32.971027006000014], "geometry": {"coordinates": [-96.71073503599992, 32.971027006000014], "type": "Point"}, "id": "283450", "properties": {"City": "RICHARDSON", "Company_Name": "ZENTECH DALLAS", "Employees": 20, "NAICS Code": "33441203", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "FIRMAN", "ZIP": "75081"}, "type": "Feature"}, {"bbox": [-96.69136797899993, 33.01147798700001, -96.69136797899993, 33.01147798700001], "geometry": {"coordinates": [-96.69136797899993, 33.01147798700001], "type": "Point"}, "id": "286793", "properties": {"City": "PLANO", "Company_Name": "VOTRONICS INC", "Employees": 20, "NAICS Code": "33441203", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "CAPITAL", "ZIP": "75074"}, "type": "Feature"}, {"bbox": [-96.70521898999998, 33.03120001800003, -96.70521898999998, 33.03120001800003], "geometry": {"coordinates": [-96.70521898999998, 33.03120001800003], "type": "Point"}, "id": "287465", "properties": {"City": "PLANO", "Company_Name": "SYNERGIE CAD USA INC", "Employees": 4, "NAICS Code": "33441203", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "REPUBLIC", "ZIP": "75074"}, "type": "Feature"}, {"bbox": [-96.66169998099994, 33.011026999, -96.66169998099994, 33.011026999], "geometry": {"coordinates": [-96.66169998099994, 33.011026999], "type": "Point"}, "id": "288517", "properties": {"City": "PLANO", "Company_Name": "PRECISION TECHNOLOGY INC", "Employees": 142, "NAICS Code": "33441201", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "PLANO", "ZIP": "75074"}, "type": "Feature"}, {"bbox": [-96.66769102999992, 33.00871799400013, -96.66769102999992, 33.00871799400013], "geometry": {"coordinates": [-96.66769102999992, 33.00871799400013], "type": "Point"}, "id": "288595", "properties": {"City": "PLANO", "Company_Name": "CIRCUIT DESIGN SPECIALTIES INC", "Employees": 20, "NAICS Code": "33441202", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "PLANO", "ZIP": "75074"}, "type": "Feature"}, {"bbox": [-96.62014200199994, 32.99897000800004, -96.62014200199994, 32.99897000800004], "geometry": {"coordinates": [-96.62014200199994, 32.99897000800004], "type": "Point"}, "id": "291715", "properties": {"City": "RICHARDSON", "Company_Name": "CIRCUIT BOARD CONSORTIUM", "Employees": 20, "NAICS Code": "33441203", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "LANCELOT", "ZIP": "75082"}, "type": "Feature"}, {"bbox": [-96.56381502599993, 33.00111699100009, -96.56381502599993, 33.00111699100009], "geometry": {"coordinates": [-96.56381502599993, 33.00111699100009], "type": "Point"}, "id": "293290", "properties": {"City": "WYLIE", "Company_Name": "LONE STAR CIRCUITS", "Employees": 101, "NAICS Code": "33441202", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "HENSLEY", "ZIP": "75098"}, "type": "Feature"}, {"bbox": [-97.19307601299991, 33.19893200100008, -97.19307601299991, 33.19893200100008], "geometry": {"coordinates": [-97.19307601299991, 33.19893200100008], "type": "Point"}, "id": "372528", "properties": {"City": "DENTON", "Company_Name": "SOLID STATE EXCH \u0026 REPAIR CO", "Employees": 4, "NAICS Code": "33441202", "NAICS Name": "Bare Printed Circuit Board Manufacturing", "State": "TX", "Street": "SPARTAN", "ZIP": "76207"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_68ed7a0223d0e18c74c1f65a06d74347.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["Company_Name", "Street", "City", "State", "ZIP", "NAICS Code", "NAICS Name", "Employees"];
+    let aliases = ["Company_Name: ", "Street: ", "City: ", "State: ", "ZIP: ", "NAICS Code: ", "NAICS Name: ", "Employees: "];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumtooltip", "sticky": true});
+                     
+    
+    geo_json_68ed7a0223d0e18c74c1f65a06d74347.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["Company_Name", "Street", "City", "State", "ZIP", "NAICS Code", "NAICS Name", "Employees"];
+    let aliases = ["Company_Name: ", "Street: ", "City: ", "State: ", "ZIP: ", "NAICS Code: ", "NAICS Name: ", "Employees: "];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumpopup"});
+                     
+    
+            var layer_control_91741d3e8872aa4aa385a9417d74dd96 = {
+                base_layers : {
+                },
+                overlays :  {
+                    "NAICS 334417 (Electronic Connector Manufacturing)" : feature_group_0961c89fe6fb55c653fdf7ddde9483f5,
+                    "NAICS 334419 (Other Electronic Component Manufacturing)" : feature_group_7194394f97405f4e4cd0da446edfebd3,
+                    "NAICS 334413 (Semiconductor and Related Device Manufacturing)" : feature_group_f23694d6e43d1a16dcfb5a7c199935df,
+                    "NAICS 334412 (Bare Printed Circuit Board Manufacturing)" : feature_group_a7a752c0585a488d22ada637600c9495,
+                },
+            };
+            L.control.layers(
+                layer_control_91741d3e8872aa4aa385a9417d74dd96.base_layers,
+                layer_control_91741d3e8872aa4aa385a9417d74dd96.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+            ).addTo(map_a032e7493389ca1da125e8015f2b4115);
+        
+</script>
+</html>
